@@ -1,4 +1,4 @@
-[Source Code]()
+[Source Code](https://github.com/im-cr/Chrrp)
 
 # Setup
 Run `npm install` to install project dependencies. Then run `npm run start` to start the app in dev mode. 
@@ -65,7 +65,7 @@ Also, I would leverage a data storage resource like mongo cloud or firestore to 
 ## More About Cortney
 
 Thank You for taking the time to review this demo. If you'd like to learn more about me or want to tell me how bad of a job I did please checkout some of the links below:
-- [Linkedin]()
+- [Linkedin](https://linkedin.com/in/cortneyrobinson)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
