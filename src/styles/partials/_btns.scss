@@ -1,0 +1,52 @@
+.btn {
+  outline:none;
+  &.pill {
+    border-radius:20px;
+    
+  }
+  &.form{
+    padding:.5rem 2rem;
+    border-radius:20px;
+    border:none;
+    outline:none;
+    color:$textWhite;
+    background:$brandMain;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+
+    &:hover{
+      background:darken($brandMain, 10%);
+    }
+  }
+
+  &.delete{
+    padding:1rem 3rem;
+    font-weight:600;
+    border-radius:25px;
+    transition:all ease-in-out .2s;
+    cursor: pointer;
+
+    &._ghost{
+      margin-right:1rem;
+      border:solid 1px $textWhite;
+      background:none;
+      color:$textWhite;
+
+      &:hover{
+        border:solid 1px transparent;
+        background:darken($bgGreen, 10%);
+      }
+    }
+
+    &._solid{
+      border:none;
+      background:$bgWhite;
+      color:$bgGreen;
+
+      &:hover{
+        background:darken($bgGreen, 12%);
+        color:$textWhite;
+      }
+    }
+  }
+}

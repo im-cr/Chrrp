@@ -1,0 +1,29 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html {
+  font: 100% 'helvetica', arial, 'sans serif';
+}
+body {
+  // display:flex;
+  // align-items: flex-start;
+  // justify-content: center;
+  // height:100vh;
+  margin:0;
+  padding:0;
+  background:$bgMain;
+}
+#root{
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  width:100vh;
+  height:100vh;
+}
+
+ul {
+  list-style: none;
+  li {}
+}

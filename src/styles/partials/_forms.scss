@@ -1,0 +1,46 @@
+.form{
+  &.__title{
+    margin:0rem 0 1rem;
+    color:$textForm;
+
+  }
+
+  &.__picker{
+    
+    > input[type='text']{
+      border-radius:20px 0 0 20px;
+    }
+    > button {
+      border-radius:0 20px 20px 0;
+    }
+  }
+  &.__tweet{
+    display:flex;
+    flex:2 1 auto;
+    justify-content: space-between;
+    width:100%;
+    > input[type='text']{
+      width:100%;
+    }
+  }
+}
+
+input{
+
+  &[type='text']{
+    padding:.35rem 1rem;
+    border:solid 1px $bdrMain;
+    border-radius:20px;
+    outline:none;
+    color:$textForm;
+
+    &.clear {
+      padding-left:0;
+      border:none;
+    }
+
+    &:active,&:focus{
+      color:$textBase;
+    }
+  }
+}

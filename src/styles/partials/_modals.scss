@@ -1,0 +1,35 @@
+.modal{
+  display:flex;
+  &._msg{
+    display:flex;
+    align-items: center;
+    text-align: left;
+    flex:1 0 50%;
+    // font-weight:600;
+
+    > img {
+      display:inline-block;
+      margin-right:1rem;
+      width:15px;
+      height:15px;
+      line-height: 1;
+    }
+    > p{
+      margin-top:3px;
+      font-size:16px;
+      line-height: 1;
+    }
+  }
+  &._actions{
+    flex:1 1 100%;
+    justify-content: flex-end;
+  }
+
+  @media #{$tablet}{
+    max-width:100%;
+    
+    &._msg{
+      margin-bottom:1rem;
+    }
+  }
+}

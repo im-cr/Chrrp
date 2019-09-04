@@ -1,0 +1,29 @@
+//---------------------------------------- BRAND COLORS
+$brandMain  :   #2582ff;
+
+//---------------------------------------- BACKGROUND
+$bgMain     :    #f4f6f9;
+$bgWhite    :     #ffffff;
+$bgGreen    :     #3abd7e;
+
+
+//---------------------------------------- BORDERS 
+$bdrMain    :     #bcc1cb;
+$bdrGray    :     #e0e3e7;
+
+
+//---------------------------------------- TEXT COLORS
+$textBase   :     rgba(0,0,0,.6);
+$textForm   :     #bcc2cc;
+$textWhite  :     #ffffff;
+$textGray   :      #7e8b9c;
+
+
+
+//---------------------------------------- MEDIA QUERIES
+$desktop-2x :       'only screen and (min-width:1480px)';
+$desktop-xl : 			'only screen and (min-width:1280px)';
+$desktop-lg : 			'only screen and (min-width:968px) and (max-width:1279px)';
+$desktop-md	: 			'only screen and (min-width:768px) and (max-width:967px)';
+$tablet 		: 			'only screen and (max-width:767px)';
+$phone 			: 			'only screen and (max-width:480px)';

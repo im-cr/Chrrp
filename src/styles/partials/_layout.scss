@@ -1,0 +1,368 @@
+#root{
+  width:100%;
+}
+.container {
+  width:100%;
+  max-width:800px;
+  margin:0 auto;
+
+  &.__picker{
+    max-width:440px;
+    margin-top:10%;
+    padding:2rem 2rem 3rem;
+    border-radius: 8px;
+    background:$bgWhite;
+    box-shadow:0 2px 28px 0px rgba(0,0,0,.1);
+    transition:all ease-in-out .2s;
+
+    &:hover{
+      box-shadow:0 2px 28px 0px rgba(0,0,0,.1),
+      0 12px 38px 0px rgba(0,0,0,.1);
+    }
+  }
+
+  &.__app{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+    margin:2rem auto;
+    // overflow: hidden;
+  }
+  &.__content{
+    display:flex;
+    justify-content: space-around;
+    .col {
+      flex:1 1 auto;
+      &.__full {
+        flex:5 0 auto;
+        margin-left:2rem;
+      }  
+    }
+    @media #{$tablet}{
+      display:block;
+      padding:0 1rem;
+      .col {
+
+        &.__full{
+          margin:0;
+        }
+      }
+    }
+  }
+
+  &.__modal{
+    z-index:100;
+    position:fixed;
+    bottom:20%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:2rem 1rem;
+    border-radius:8px;
+    background:$bgGreen;
+    color:$textWhite;
+    box-shadow:0 2px 28px 0px rgba(0,0,0,.1);
+
+    &.is-visible{
+      display:flex;
+    }
+    &.is-hidden{
+      display:none;
+    }
+
+    @media #{$tablet}{
+      flex-direction: column;
+      max-width:93%;
+      bottom:20px;
+    }
+  }
+  
+}
+//SIDEBAR ELEMENTS
+.sidebar{
+
+  &.__global{
+    // width:225px;
+    max-width:250px;
+    padding:2rem;
+    border-radius: 5px;
+    background:$bgWhite;
+    box-shadow:0 2px 48px 0px rgba(0,0,0,.1);
+
+    @media #{$tablet}{
+      width:100%;
+      max-width:100%;
+      margin-bottom:2rem;
+    }
+  }
+}
+
+//LISTS ELEMENTS
+
+.user {
+  &.__wrap{
+    @media #{$tablet}{
+      display:flex;
+      justify-content: space-between;
+    }
+  }
+  &.__img{
+    display:flex;
+    align-items: center;
+    .avatar{
+      display:block;
+      width:60px;
+      height:60px;
+      margin-right:15px;
+      background:black;
+      border-radius: 50%;
+      overflow: hidden;
+
+      > img {
+        width:100%;
+        max-width:100%;
+        height:100%;
+        max-height:100%;
+        object-fit: cover;
+      }
+      &.__sm{
+        width:40px;
+        height:40px;
+      }
+    }
+    .title{
+      font-size:1rem;
+    }
+    p{
+      font-size:16px;
+      font-weight: 600;
+      span {
+        display:block;
+        margin:2px 0 0;
+        font-size:13px;
+        font-weight:400;
+        color:$textGray;
+      }
+    }
+  }
+  &.__desc{
+    margin:1.5rem 0 0;
+    letter-spacing: .5px;
+    font-size:12px;
+  }
+  &.__bio{
+    margin-top:2rem;
+    li {
+      display:flex;
+      padding:.5rem 0;
+      font-size:.75rem;
+      color:$textForm;
+      > img {
+        margin-right:.75rem;
+      }
+      > a {
+        text-decoration: none;
+        color:$textForm;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    @media #{$tablet}{
+      display:flex;
+      justify-content: space-evenly;
+      margin-top:1rem;
+      li{
+        
+      }
+    }
+  }
+  &.__tweet{
+    margin:1rem 0 0;
+    line-height:1.2;
+    font-size:15px;
+    font-weight: 400;
+
+    > p {
+      max-width:480px;
+    }
+  }
+}
+
+//TWEETFORMS
+.tweetForm{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  padding:1.5rem 2rem;
+  border-radius:8px;
+  background:$bgWhite;
+  box-shadow:0 2px 28px 0px rgba(0,0,0,.1);
+}
+
+//TWEET LIST
+.tweetList{
+  margin:2rem 0 0;
+  border-radius:8px;
+  // background:$bgWhite;
+  box-shadow:0 2px 28px 0px rgba(0,0,0,.1);
+  
+  
+
+  .tweetItem{
+    position: relative;
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding:2rem 2rem;    
+    background:$bgWhite;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+
+    &:hover{
+      background:darken($bgWhite,3%);
+    }
+
+    &:first-child{
+      border-radius:8px 8px 0 0;
+    }
+    &:last-child{
+      border-radius:0 0 8px 8px;
+    }
+    &:only-child{
+      border-radius:8px;
+    }
+    
+    + .tweetItem{
+      border-top:solid 1px $bdrGray;
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+      
+    }
+    &:last-of-type{
+      border-radius:auto auto 0 0;
+    }
+
+    > .tweetOption{
+      position: absolute;
+      top:20px;
+      right:20px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width:15px;
+      height:15px;
+      transition: all ease-in-out .2s;
+      cursor: pointer;
+      &:hover{
+        .tweetMenu{
+          background:$textBase;
+
+          &:after, &:before{
+            background:$textBase;
+          }
+        }
+        .tweetsubMenu{
+          opacity:1;
+          color:$textBase;
+        }
+      }
+
+      .tweetMenu{        
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:3px;
+        height:3px;
+        border-radius: 50%;
+        background:$textForm;
+        cursor: pointer;
+
+        &:after, &:before{
+          position:absolute;
+          content:'';
+          display:block;
+          width:3px;
+          height:3px;
+          border-radius: 50%;
+          background:$textForm;
+          cursor:pointer;
+        }
+        &:before{
+          top:-0px;
+        }
+        &:after{
+          bottom:0px;
+        }
+      }
+
+      .tweetsubMenu{
+        opacity:0;
+        position:absolute;
+        top:220%;
+        left:-250%;
+        width:90px;
+        padding:.5rem 1rem;
+        font-size:13px;
+        border:solid 2px $bdrGray;
+        border-radius:3px;
+        background:$bgWhite;        
+        color:$textForm;
+        transition: all ease-in-out .2s;
+        &:hover{
+          
+        }
+
+        &:before,&:after{
+          z-index:10;
+          content:'';
+          display:block;
+          position:absolute;
+          top:-1.25rem;
+          left:50%;
+          margin-left:-10px;
+          width:0px;
+          height:0px;
+          border:solid 10px transparent;
+          border-bottom-color:$bgWhite;
+          // background:$bgWhite;
+        }
+        &:after{
+          z-index:9;
+          top:-1.35rem;
+          border-bottom-color:$bdrGray;
+        }
+
+        > img {
+          display:inline-block;
+          width:8px;
+          height:8px;
+          margin-right:5px;
+        }
+
+        @media #{$tablet}{
+          top:-10px;
+          left:-120px;
+
+          &:before,&:after{
+            left:initial;
+            top:4px;
+            right:-17px;
+            border-bottom-color:transparent;
+            border-left-color:$bgWhite;
+          }
+          &:after{
+            border-left-color:$bdrGray;
+            right:-21px;
+          }
+        }
+
+        
+      }
+
+    }
+  }
+}
